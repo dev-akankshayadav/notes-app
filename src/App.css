@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+
+body{
+    background-color: rgba(0, 0, 0, 0.356); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notes-app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-button {
+  height: 40px;
+  width: 80px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.356);
 }
 
-.App-link {
-  color: #61dafb;
+.title-wrapper {
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-here {
+  height: 50px;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.close-btn {
+  margin-left: 270px;
+  margin-top: -20px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.save-btn {
+  margin-left: 120px;
+  margin-top: 20px;
+  height: 30px;
+  width: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.description-holder {
+  background-color: aqua;
+  color: black;
+}
+
+.note {
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.title {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 5px;
+  font-size: 20px;
+  text-transform:lowercase;
 }
