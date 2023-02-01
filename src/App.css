@@ -1,14 +1,17 @@
-
-body{
-    background-color: rgba(0, 0, 0, 0.356); 
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  background-color: rgba(0, 0, 0, 0.356);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .notes-app {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+.heading{
+    color: white;
+}
 .add-button {
   height: 40px;
   width: 80px;
@@ -32,10 +35,10 @@ body{
 }
 
 .title-here {
+  color: white;  
   height: 50px;
   border: none;
   font-size: large;
-  font-weight: bold;
   margin-bottom: 20px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.356);
@@ -74,22 +77,27 @@ body{
 
 .note {
   margin: 20px;
+
   background-color: rgba(0, 0, 0, 0.356);
-  color: black;
+  color: white;
   font-size: 20px;
   border-radius: 5px;
 }
 
 .title {
+  padding: 8px;
+  color: white;
   margin: 5px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   font-style: oblique;
-  text-transform: uppercase;
+  
 }
 
 .description {
+  padding: 8px;
+  color: white;
   margin: 5px;
-  font-size: 20px;
-  text-transform:lowercase;
+  font-size: 15px;
+  
 }
