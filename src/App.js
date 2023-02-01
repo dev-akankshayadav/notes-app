@@ -36,7 +36,7 @@ export default function App() {
   return (
     <>
       <div className="notes-app">
-        <h1> Notes App</h1>
+        <h1 className="heading"> Notes App</h1>
         <button
           className="save-btn"
           onClick={handleOpenModal}
