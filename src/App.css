@@ -12,13 +12,6 @@ body {
 .heading{
     color: white;
 }
-.add-button {
-  height: 40px;
-  width: 80px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: none;
-}
 
 .modal {
   display: flex;
