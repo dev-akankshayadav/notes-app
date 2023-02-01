@@ -37,11 +37,7 @@ export default function App() {
     <>
       <div className="notes-app">
         <h1 className="heading"> Notes App</h1>
-        <button
-          className="save-btn"
-          onClick={handleOpenModal}
-          title="add note"
-        >
+        <button className="save-btn" onClick={handleOpenModal} title="add note">
           <FaPlus />
         </button>
       </div>
@@ -71,18 +67,22 @@ export default function App() {
             value={noteDescription}
           />
           <button className="save-btn" title="save" onClick={handleSave}>
-            <FaPlus/>
+            <FaPlus />
           </button>
         </div>
       ) : (
         <>
           {notes.map((note) => {
-            return (
-              <div className="note">
-                <p className="title">{note.title}</p>
-                <p className="description">{note.description}</p>
-              </div>
-            );
+            if (note.title !== "" && note.description !== "") {
+              return (
+                <div className="note">
+                  <p className="title">{note.title}</p>
+                  <p className="description">{note.description}</p>
+                </div>
+              );
+            } else {
+              return null;
+            }
           })}
         </>
       )}
