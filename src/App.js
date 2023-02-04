@@ -7,32 +7,35 @@ export default function App() {
   //adding state for Title and Description
   const [noteTitle, setNoteTitle] = useState("");
   const [noteDescription, setNoteDescription] = useState("");
-  const [notes, setNotes] = useState([{ title: "", description: "" }]);
+  const [notes, setNotes] = useState([]);
   console.log(notes);
 
   function handleOpenModal() {
     setOpenModal(true);
-    setNoteTitle("");
-    setNoteDescription("");
   }
 
   function handleCloseModal() {
     setOpenModal(false);
+    setNoteTitle("");
+    setNoteDescription("");
   }
 
-  // console.log(`Title: ${noteTitle}, Description: ${noteDescription}`);
+  console.log(`Title: ${noteTitle}, Description: ${noteDescription}`);
 
   function handleSave() {
+    if (noteTitle === "" || noteDescription === "") {
+      alert("Please enter title and description");
+      return;
+    }
     const newNote = {
       title: noteTitle,
       description: noteDescription,
     };
-    setNotes([...notes, newNote]);
+    setNotes([newNote, ...notes]);
     handleCloseModal();
   }
 
-  // console.log(notes);
-
+  console.log(notes);
   return (
     <>
       <div className="notes-app">
@@ -73,16 +76,12 @@ export default function App() {
       ) : (
         <>
           {notes.map((note) => {
-            if (note.title !== "" && note.description !== "") {
-              return (
-                <div className="note">
-                  <p className="title">{note.title}</p>
-                  <p className="description">{note.description}</p>
-                </div>
-              );
-            } else {
-              return null;
-            }
+            return (
+              <div className="note" key={note.title}>
+                <p className="title">{note.title}</p>
+                <p className="description">{note.description}</p>
+              </div>
+            );
           })}
         </>
       )}
