@@ -19,9 +19,7 @@ export default function App() {
     setNoteTitle("");
     setNoteDescription("");
   }
-
   console.log(`Title: ${noteTitle}, Description: ${noteDescription}`);
-
   function handleSave() {
     if (noteTitle === "" || noteDescription === "") {
       alert("Please enter title and description");
@@ -44,7 +42,15 @@ export default function App() {
           <FaPlus />
         </button>
       </div>
-      {openModal ? (
+      {notes.map((note) => {
+        return (
+          <div className="note" key={note.title}>
+            <p className="title">{note.title}</p>
+            <p className="description">{note.description}</p>
+          </div>
+        );
+      })}
+      {openModal && (
         <div className="modal">
           <button
             className="close-btn"
@@ -73,17 +79,6 @@ export default function App() {
             <FaPlus />
           </button>
         </div>
-      ) : (
-        <>
-          {notes.map((note) => {
-            return (
-              <div className="note" key={note.title}>
-                <p className="title">{note.title}</p>
-                <p className="description">{note.description}</p>
-              </div>
-            );
-          })}
-        </>
       )}
     </>
   );
