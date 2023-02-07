@@ -3,6 +3,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.notes-container {
+  position: relative;
+}
+
 .notes-app {
   display: flex;
   flex-direction: row;
@@ -14,11 +18,11 @@ body {
 }
 
 .modal {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
   margin-left: 30%;
   height: 300px;
   width: 300px;
