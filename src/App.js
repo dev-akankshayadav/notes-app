@@ -35,21 +35,13 @@ export default function App() {
 
   console.log(notes);
   return (
-    <>
+    <div className="notes-container">
       <div className="notes-app">
         <h1 className="heading"> Notes App</h1>
         <button className="save-btn" onClick={handleOpenModal} title="add note">
           <FaPlus />
         </button>
       </div>
-      {notes.map((note) => {
-        return (
-          <div className="note" key={note.title}>
-            <p className="title">{note.title}</p>
-            <p className="description">{note.description}</p>
-          </div>
-        );
-      })}
       {openModal && (
         <div className="modal">
           <button
@@ -80,6 +72,14 @@ export default function App() {
           </button>
         </div>
       )}
-    </>
+      {notes.map((note) => {
+        return (
+          <div className="note" key={note.title}>
+            <p className="title">{note.title}</p>
+            <p className="description">{note.description}</p>
+          </div>
+        );
+      })}
+    </div>
   );
 }
