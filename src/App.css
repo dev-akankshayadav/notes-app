@@ -9,13 +9,17 @@ body {
   justify-content: space-between;
 }
 
-.heading{
-    color: white;
+.heading {
+  color: white;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-left: 30%;
   height: 300px;
   width: 300px;
   border-radius: 5px;
@@ -28,7 +32,7 @@ body {
 }
 
 .title-here {
-  color: white;  
+  color: white;
   height: 50px;
   border: none;
   font-size: large;
@@ -39,7 +43,7 @@ body {
 
 .close-btn {
   margin-left: 270px;
-  margin-top: -20px;
+  margin-top: -100px;
   height: 50px;
   width: 50px;
   border: none;
@@ -61,6 +65,11 @@ body {
   cursor: pointer;
 }
 
+.modal > .save-btn {
+  width: 150px;
+  margin-left: 20px;
+}
+
 .save-btn:hover {
   background-color: rgba(0, 0, 0, 0.356);
 }
@@ -79,12 +88,12 @@ body {
   margin: 5px;
   font-size: 20px;
   font-weight: bold;
-  font-style: oblique;  
+  font-style: oblique;
 }
 
 .description {
   padding: 8px;
   color: white;
   margin: 5px;
-  font-size: 15px;  
+  font-size: 15px;
 }
